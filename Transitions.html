@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Transitions</title>
+    <style>
+        body{
+            position :relative;
+            left:35%;
+            top:100px;
+        }
+        #Main{
+            width:250px;
+            height:300px;
+            display:flex;
+            overflow:hidden;
+        }
+        img{
+            width:inherit;
+            height:inherit;
+        }
+        #Main:hover#img{
+            transition: all 5s linear;
+            transform: scale(1.2,1.2);
+        }
+        #door1{
+            background-color: blueviolet;
+            width:12%;
+            height:inherit;
+            transform-origin: left;
+            position:absolute;
+            top:0;
+            left:0;
+        }
+        #Main:hover #door1{
+            transition: all 5s linear;
+            transform: perspective(400px)rotateY(90deg);
+        }
+        #door2{
+            background-color: blueviolet;
+            width: 10%;
+            height:inherit;
+            transform-origin: right;
+            position: absolute;
+            top: 0;
+            left:120px;
+        }
+        #Main:hover #door2{
+            transition: all 5s linear;
+            transform: perspective(400px)rotateY(-90deg);
+        }
+    </style>
+</head>
+<body>
+    <div id="Main">
+        <img src="../Downloads/WhatsApp Image 2023-01-26 at 6.47.43 PM.jpeg" alt="">
+        <div id="door1"></div>
+        <div id="door2"></div>
+    </div>
+</body>
+</html>
